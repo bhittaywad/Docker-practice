@@ -1,0 +1,19 @@
+# First stage: Build stage
+FROM python:3.6-alpine as builder
+
+RUN pip install flask
+
+WORKDIR /build
+COPY . .
+
+# Final stage: Production stage
+FROM python:3.6-alpine
+
+# Copy only necessary files from the builder stage
+COPY --from=builder /build /opt
+
+WORKDIR /opt
+
+EXPOSE 8080
+
+ENTRYPOINT ["python", "app.py"]
