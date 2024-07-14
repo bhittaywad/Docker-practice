@@ -27,8 +27,17 @@ Named volumes are managed by Docker and have a specific name assigned to them. T
   ```
 ## Anonymous Volumes
 Anonymous volumes are similar to named volumes but are not given a specific name. They are typically used when you don't care about the data's name or when you want Docker to handle the details.
- ```bash
-docker run -d --name mycontainer -v /path/in/container myimage
+
+```bash
+ docker run -d --name mycontainer -v /path/in/container myimage
+ ```
+ ## Host-mounted Volumes
+ Host-mounted volumes are directories or files from the host machine that are mounted directly into a container. They provide flexibility but can be less portable and more difficult to manage compared to named or anonymous volumes.
+   ```bash 
+   docker run -d --name mycontainer -v /host/path:/container/path myimage
+
+
+
 
 
 
