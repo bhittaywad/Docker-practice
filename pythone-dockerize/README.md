@@ -15,3 +15,6 @@ This project is a Python Flask application that demonstrates how to build a Dock
    ```bash
    git clone https://github.com/your/repository.git
    cd repository-name
+2. Build the Docker image using Dockerfile:
+   ```bash
+   docker image build -t <tag name >:version .
