@@ -24,5 +24,12 @@ Named volumes are managed by Docker and have a specific name assigned to them. T
   ```bash
   docker volume create mydata
   docker run -d --name mycontainer -v mydata:/path/in/container myimage
-
+  ```
 ## Anonymous Volumes
+Anonymous volumes are similar to named volumes but are not given a specific name. They are typically used when you don't care about the data's name or when you want Docker to handle the details.
+ ```bash
+docker run -d --name mycontainer -v /path/in/container myimage
+
+
+
+
