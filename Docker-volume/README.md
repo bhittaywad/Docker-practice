@@ -21,6 +21,8 @@ Named volumes are managed by Docker and have a specific name assigned to them. T
 
 #### Usage Example
 
-```bash
-docker volume create mydata
-docker run -d --name mycontainer -v mydata:/path/in/container myimage
+  ```bash
+  docker volume create mydata
+  docker run -d --name mycontainer -v mydata:/path/in/container myimage
+
+## Anonymous Volumes
