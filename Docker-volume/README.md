@@ -33,8 +33,36 @@ Anonymous volumes are similar to named volumes but are not given a specific name
  ```
  ## Host-mounted Volumes
  Host-mounted volumes are directories or files from the host machine that are mounted directly into a container. They provide flexibility but can be less portable and more difficult to manage compared to named or anonymous volumes.
+  
    ```bash 
-   docker run -d --name mycontainer -v /host/path:/container/path myimage
+    docker run -d --name mycontainer -v /host/path:/container/path myimage
+   ```
+   # Managing Docker Volumes
+   ### Listing Volumes
+   To list all Docker volumes on your system:
+
+   ```bash
+   docker volume ls
+   ```
+   ## Inspecting Volumes
+   To get detailed information about a specific volume:
+
+   ```bash 
+    docker volume inspect <volume-name>
+   ```
+   ## Removing Volumes
+   To remove unused Docker volumes:
+   
+   ```bash
+   docker volume prune
+   ```
+  
+    
+    
+
+
+   
+
 
 
 
